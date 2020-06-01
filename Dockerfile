@@ -67,6 +67,9 @@ RUN echo "alias weblog='tail /var/log/apache2/error.log'"  >> /root/.bashrc
 # RUN echo "node-sass --output-style expanded --output \$1 --source-map true \$2"  >> /root/.bashrc
 # RUN echo "}"  >> /root/.bashrc
 
+#Laravel CLI
+RUN echo 'export PATH="$PATH:/root/.composer/vendor/bin"' >> /root/.bashrc
+
 #Sourcing
 RUN /bin/bash -c "source /root/.bashrc"
 
