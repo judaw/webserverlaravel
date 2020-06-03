@@ -10,7 +10,7 @@ RUN apt install vim git zip wget curl -y
 
 # STYLE TOOLS LESS AND COMPASS
 RUN apt install npm -y && npm install -g less
-RUN apt install ruby-compass -y && gem install sass-globbing
+# RUN apt install ruby-compass -y && gem install sass-globbing
 
 # FIX TIMEZONE ISSUE FULL
 ENV TZ=America/New_York
