@@ -9,8 +9,8 @@ RUN apt install tzdata -y
 RUN apt install vim git zip wget curl -y
 
 # STYLE TOOLS LESS AND COMPASS
-# RUN apt install npm -y && npm install -g less
-# RUN apt install ruby-compass -y && gem install sass-globbing
+RUN apt install npm -y && npm install -g less
+RUN apt install ruby-compass -y && gem install sass-globbing
 
 # FIX TIMEZONE ISSUE FULL
 ENV TZ=America/New_York
@@ -63,9 +63,9 @@ RUN echo 'export LSCOLORS=ExFxBxDxCxegedabagacad'  >> /root/.bashrc
 RUN echo "alias weblog='tail /var/log/apache2/error.log'"  >> /root/.bashrc
 
 #Compile Sass
-# RUN echo "compilesass() {"  >> /root/.bashrc
-# RUN echo "node-sass --output-style expanded --output \$1 --source-map true \$2"  >> /root/.bashrc
-# RUN echo "}"  >> /root/.bashrc
+RUN echo "compilesass() {"  >> /root/.bashrc
+RUN echo "node-sass --output-style expanded --output \$1 --source-map true \$2"  >> /root/.bashrc
+RUN echo "}"  >> /root/.bashrc
 
 #Laravel CLI
 RUN echo 'export PATH="$PATH:/root/.composer/vendor/bin"' >> /root/.bashrc
